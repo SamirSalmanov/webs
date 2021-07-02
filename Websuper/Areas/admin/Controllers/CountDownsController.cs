@@ -60,17 +60,11 @@ namespace Websuper.Areas.admin.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("Icon,Counter,ID,IsActive,IsDeleted,ModifiedOn")] CountDown countDown, IFormFile Icon)
+        public async Task<IActionResult> Create([Bind("Icon,Counter,ID,IsActive,IsDeleted,ModifiedOn")] CountDown countDown)
         {
             if (ModelState.IsValid)
             {
-                string path = "/uploads/" + Guid.NewGuid() + Icon.FileName;
-                using (var fileStream = new FileStream(_appEnvironment.WebRootPath + path, FileMode.Create))
-                {
-                    Path.Combine(Directory.GetCurrentDirectory(), "uploads", path);
-                    await Icon.CopyToAsync(fileStream);
-                }
-                countDown.Icon = path;
+
                 _context.Add(countDown);
                 await _context.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));

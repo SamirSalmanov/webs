@@ -1,0 +1,29 @@
+﻿@model HomeViewModel
+
+<div class="product">
+    <div class="product-blog">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8">
+                    <div class="left">
+                        <img class="img-fluid" src="@Model.Gallery.PhotoURL" alt="">
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="right">
+                        <h1>@Model.Gallery.Title</h1>
+                        <p>
+                            @Model.Gallery.Description
+                        </p>
+                        <div class="com d-flex">
+                            <i class="bi bi-hdd-stack"></i>
+                            <h6>@Model.Gallery.Category</h6>
+                        </div>
+                    </div>
+                </div>
+            </div>
+           
+
+        </div>
+    </div>
+</div>

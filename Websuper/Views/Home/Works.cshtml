@@ -1,0 +1,49 @@
+﻿@model HomeViewModel
+
+    <section class="portfolios">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 col-lg-3 col-md-3">
+                    <div class="left-port">
+                        <div class="line">
+                        </div>
+                        <h3>Categories</h3>
+                        <ul>
+                            <li><a href="#">Satış</a></li>
+                            <li><a href="#">Portfolio</a> </li>
+                            <li><a href="#">Dizayn</a> </li>
+                            <li><a href="#">Kurs</a> </li>
+                            <li><a href="#">Satış</a> </li>
+                        </ul>
+
+                    </div>
+
+
+                </div>
+                <div class="col-12 col-md-9 col-lg-9">
+                    <div class="right-port">
+                        <div class="row">
+                            @foreach (var work in Model.Galleries)
+                            {
+                            <div class="col-12 col-md-6  col-lg-4">
+                                <div class="img">
+                                    <img src="@work.PhotoURL" alt="">
+                                    <div class="ground"></div>
+                                    <a href="/product/detail/@work.ID">
+                                        <i class="fas fa-plus"></i>
+                                    </a>
+
+                                </div>
+                            </div>
+                            }
+                            </div>
+
+                        </div>
+                    </div>
+
+
+                </div>
+            </div>
+        </div>
+    </section>
+

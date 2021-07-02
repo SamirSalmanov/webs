@@ -100,13 +100,23 @@ namespace Websuper.Areas.admin.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("Title,Description,PhotoURL,ID,IsActive,IsDeleted,ModifiedOn")] Blog blog)
+        public async Task<IActionResult> Edit(int id, [Bind("Title,Description,PhotoURL,ID,IsActive,IsDeleted,ModifiedOn")] Blog blog, IFormFile NewImg)
         {
             if (id != blog.ID)
             {
                 return NotFound();
             }
+            if (NewImg != null)
+            {
+                string path = "/uploads/" + Guid.NewGuid() + NewImg.FileName;
+                using (var fileStream = new FileStream(_appEnvironment.WebRootPath + path, FileMode.Create))
+                {
+                    Path.Combine(Directory.GetCurrentDirectory(), "uploads", path);
+                    await NewImg.CopyToAsync(fileStream);
+                }
+                blog.PhotoURL = path;
 
+            }
             if (ModelState.IsValid)
             {
                 try

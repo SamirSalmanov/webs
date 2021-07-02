@@ -1,0 +1,43 @@
+﻿@model HomeViewModel
+
+<div class="about-us">
+    <div class="up-comment">
+        <h2>About us</h2>
+        <p>Home/About us</p>
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-6 pt-5">
+                <div class="left">
+                    <div class="blue-line"></div>
+                    <h1>
+                        @Model.OneBlog.Title
+                    </h1>
+                    <p>
+                        @Model.OneBlog.Description
+                    </p>
+                </div>
+            </div>
+            <div class="col-lg-6 pt-5">
+                <div class="right">
+                    <img src="@Model.OneBlog.PhotoURL" alt="">
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="mid-comment">
+    <div class="abc d-flex">
+        <h1 class="leftcom">Carreer</h1>
+        <h1 class="rightcom">Opportunity</h1>
+    </div>
+    <p>
+        Vestibulum dui lorem pharetra montes id scelerisque suspendisse quam libero non faucibus cum natoque
+        condimentum taciti leo in a.Morbi mi vestibulum nullam eu sem consequat penatibus arcu torquent natoque non
+        a iaculis integer tincidunt curabitur.Dis pretium suspendisse a vestibulum nec feugiat semper ipsum
+        sagittis.F
+    </p>
+
+</div>
+

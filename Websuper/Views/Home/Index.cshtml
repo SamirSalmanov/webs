@@ -1,8 +1,252 @@
-﻿@{
+﻿@model HomeViewModel
+
+@{
     ViewData["Title"] = "Home Page";
+    var sliders = ViewData["slider"] as List<Slider>;
+    var consultnow = ViewData["consultnow"] as ConsultNow;
 }
 
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+<section class="first-slider">
+    <div class="all-slider">
+        @foreach (var slider in Model.Sliders)
+        {
+
+            <div class="slider-part">
+                <img src="@slider.PhotoURL" alt="">
+                <div class="slider-2">
+                    <div class="all-slide-2">
+                        <p>@slider.SubTitle</p>
+                        <h1>@slider.Title</h1>
+                        <div class="slider-buttons">
+                            <button class="service-but">
+                                TALK TO US
+                            </button>
+                            <button class="que-but">
+                                GET A QUOTE
+                            </button>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+        }
+    </div>
+</section>
+<div class="additionaly">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-3 col-12">
+                <div class="wrapper">
+                    <h4>@Model.ConsultNow.Title</h4>
+                    <p>
+                        @Model.ConsultNow.Description
+                    </p>
+                    <div class="abcd d-flex justify-content-start">
+                        <div class="for-bg">
+                            <a href="">Consult Now</a>
+                            <i class="fas fa-angle-right"></i>
+                            <div class="line1"></div>
+                            <div class="line2"></div>
+                            <div class="line3"></div>
+                            <div class="line4"></div>
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+            <div class="col-lg-3 col-12">
+                <div class="wrapper">
+                    <img width="70px" src="~/assets/photo/arrow.png" alt="">
+                    <h4>Engrossing content</h4>
+                    <p>
+                        The content delivery needs to be original & engrossing to hold the attention of the
+                        visitors.
+                    </p>
+                </div>
+            </div>
+            <div class="col-lg-3 col-12">
+                <div class="wrapper">
+                    <img width="70px" src="~/assets/photo/flag.png" alt="">
+                    <h4>Engaging copy nails!</h4>
+                    <p>
+                        When the visitor is impressed with the content, the retention is likely to be longer in
+                        the site.
+                    </p>
+                </div>
+            </div>
+            <div class="col-lg-3 col-12">
+                <div class="wrapper">
+                    <img width="70px" src="~/assets/photo/fire.png" alt="">
+                    <h4>Retaining the visitor</h4>
+                    <p>
+                        When the copy nails it, the call to action appears like a shadow intending to trigger a
+                        move.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
 </div>
+<div class="services">
+    <div class="container">
+        <div class="row">
+            @foreach (var services in Model.Services)
+            {
+            <div class="for-bor-1 col-lg-4 p-0">
+                <div class="one-service">
+                    <img src="@services.ImageURL" alt="">
+                    <div class="comment-area">
+                        <h2>@services.SubTitle</h2>
+                        <h1>@services.Title</h1>
+                        <p>@services.Description</p>
+                    </div>
+                </div>
+            </div>
+            }
+        </div>
+    </div>
+</div>
+<div class="building">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-5">
+                <div class="left">
+                    <h5>@Model.OneBlog.SubTitle</h5>
+                    <h1>@Model.OneBlog.Title</h1>
+                    <p>
+                        @Model.OneBlog.Description
+                    </p>
+                    <div class="abcd d-flex justify-content-start">
+                        <div class="for-bg">
+                            <a href="">Consult Now</a>
+                            <i class="fas fa-angle-right"></i>
+                            <div class="line1"></div>
+                            <div class="line2"></div>
+                            <div class="line3"></div>
+                            <div class="line4"></div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-7">
+                <div class="right">
+                    <img src="@Model.OneBlog.PhotoURL" alt="">
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="gallery">
+    <div class="gallery-head">
+        <h4>THE BEST PICKS</h4>
+        <h1>Our Gallery</h1>
+    </div>
+    <div class="all-gallery row m-0">
+        @foreach (var gallery in Model.Galleries)
+        {
+
+
+        <div class="col-lg-3 m-0 p-0">
+            <div class="one-item">
+                <img src="@gallery.PhotoURL" alt="">
+                <div class="blue-line1"></div>
+                <div class="blue-line2"></div>
+                <div class="blue-line3"></div>
+                <div class="blue-line4"></div>
+                <div class="for-ico">
+                    <a href="product/detail/@gallery.ID">
+                        <i id="ihov1" class="fas fa-link"></i>
+                    </a>
+                    <i id="ihov2" class="fas fa-search"></i>
+                </div>
+                <div class="comment">
+                    <h2>@gallery.Title</h2>
+                    <p>@gallery.Category</p>
+                </div>
+
+
+            </div>
+        </div>
+        }
+    </div>
+</div>
+<div class="blog">
+    <div class="container">
+        <div class="gallery-head">
+            <h4>THE BEST PICKS</h4>
+            <h1>Our Blog</h1>
+        </div>
+        <div class="row">
+            @foreach (var blog in Model.Blogs)
+            {
+            <div class="col-lg-4">
+                <div class="one-blog">
+                    <img src="@blog.PhotoURL" alt="">
+                    <div class="comment">
+                        <h4>@blog.Title</h4>
+                        <h6>
+                            @blog.Description
+                        </h6>
+                        <div class="forbut d-flex">
+                            <a href="">CONTINUE READING</a><i id="base" class="fas fa-caret-right"></i>
+                            <i id="up" class="fas fa-caret-right"></i>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+            }
+        </div>
+    </div>
+</div>
+<section class="support">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-4 col-12 col-md-12 p-0">
+                <div class="d-flex">
+                    <div class="ico">
+                        <img class="img-fluid" src="~/assets/photo/question.png" alt="">
+                    </div>
+                    <div>
+                        <h1>
+                            Get your <br>
+                            <strong>Clarification</strong>
+                        </h1>
+                        <p>Using our 24/7 knowledgebase, forum & comments get clarified.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-12 col-md-12 p-0">
+                <div class="d-flex">
+                    <div class="ico">
+                        <img class="img-fluid" src="~/assets/photo/support.png" alt="">
+                    </div>
+                    <div>
+                        <h1>
+                            Get your <br>
+                            <strong>Clarification</strong>
+                        </h1>
+                        <p>Using our 24/7 knowledgebase, forum & comments get clarified.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-12 col-md-12 p-0">
+                <div class="d-flex">
+                    <div class="ico">
+                        <img class="img-fluid" src="~/assets/photo/package.png" alt="">
+                    </div>
+                    <div>
+                        <h1>
+                            Get your <br>
+                            <strong>Clarification</strong>
+                        </h1>
+                        <p>Using our 24/7 knowledgebase, forum & comments get clarified.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

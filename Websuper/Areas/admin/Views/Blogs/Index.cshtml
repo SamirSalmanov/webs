@@ -42,7 +42,7 @@
                 @Html.DisplayFor(modelItem => item.Description)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.PhotoURL)
+                <img width="100px" src="@Html.DisplayFor(modelItem => item.PhotoURL)" />
             </td>
             <td>
                 @Html.DisplayFor(modelItem => item.IsActive)
@@ -54,7 +54,7 @@
                 @Html.DisplayFor(modelItem => item.ModifiedOn)
             </td>
             <td class="d-flex">
-                <a class="btn btn-primary btn-sm mx-1" asp-action="Edit" asp-route-id="@item.ID">><i class="far fa-edit"></i></a>
+                <a class="btn btn-primary btn-sm mx-1" asp-action="Edit" asp-route-id="@item.ID"><i class="far fa-edit"></i></a>
                 <a class="btn btn-danger btn-sm mx-1" asp-action="Delete" asp-route-id="@item.ID"><i class="far fa-trash-alt"></i></a>
             </td>
         </tr>
