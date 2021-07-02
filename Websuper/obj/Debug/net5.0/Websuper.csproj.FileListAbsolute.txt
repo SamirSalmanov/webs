@@ -411,3 +411,4 @@ C:\Users\user\Desktop\websuper-back\Websuper\obj\Debug\net5.0\Websuper.genruntim
 C:\Users\user\Desktop\websuper-back\Websuper\obj\Debug\net5.0\Razor\Views\Product\Detail.cshtml.g.cs
 C:\Users\user\Desktop\websuper-back\Websuper\obj\Debug\net5.0\Razor\Views\Home\AboutUs.cshtml.g.cs
 C:\Users\user\Desktop\websuper-back\Websuper\obj\Debug\net5.0\Razor\Views\Home\Works.cshtml.g.cs
+C:\Users\user\Desktop\websuper-back\Websuper\obj\Debug\net5.0\Razor\Views\Home\WhyWe.cshtml.g.cs

@@ -55,6 +55,11 @@ namespace Websuper.Controllers
             };
             return View(vm);
         }
+        public IActionResult WhyWe()
+        {
+          
+            return View();
+        }
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
         public IActionResult Error()
