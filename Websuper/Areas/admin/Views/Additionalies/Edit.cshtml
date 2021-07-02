@@ -5,17 +5,16 @@
     Layout = "~/Areas/admin/Views/Shared/_AdminLayout.cshtml";
 }
 
-<h1>Edit</h1>
-
-<h4>Additionaly</h4>
-<hr />
 <div class="row">
     <div class="col-md-4">
         <form asp-action="Edit">
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
             <div class="form-group">
                 <label asp-for="Icon" class="control-label"></label>
-                <input asp-for="Icon" class="form-control" />
+                <input value="Icon" type="file" asp-for="Icon" class="form-control" />
+                <img class="img-fluid my-2" src="@Model.Icon" alt="Alternate Text" />
+
+
                 <span asp-validation-for="Icon" class="text-danger"></span>
             </div>
             <div class="form-group">
@@ -25,7 +24,7 @@
             </div>
             <div class="form-group">
                 <label asp-for="Description" class="control-label"></label>
-                <input asp-for="Description" class="form-control" />
+                <textarea rows="4" asp-for="Description" class="form-control" ></textarea>
                 <span asp-validation-for="Description" class="text-danger"></span>
             </div>
             <input type="hidden" asp-for="ID" />
@@ -40,18 +39,13 @@
                 </label>
             </div>
             <div class="form-group">
-                <label asp-for="ModifiedOn" class="control-label"></label>
-                <input asp-for="ModifiedOn" class="form-control" />
-                <span asp-validation-for="ModifiedOn" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <input type="submit" value="Save" class="btn btn-primary" />
+                <input type="submit" value="Yadda saxla" class="btn btn-primary" />
             </div>
         </form>
     </div>
 </div>
 
 <div>
-    <a asp-action="Index">Back to List</a>
+    <a asp-action="Index">Siyahılara dön</a>
 </div>
 
