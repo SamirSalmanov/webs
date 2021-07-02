@@ -99,11 +99,22 @@ namespace Websuper.Areas.admin.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("Icon,Title,Description,ID,IsActive,IsDeleted,ModifiedOn")] Additionaly additionaly)
+        public async Task<IActionResult> Edit(int id, [Bind("Icon,Title,Description,ID,IsActive,IsDeleted,ModifiedOn")] Additionaly additionaly, IFormFile NewIco)
         {
             if (id != additionaly.ID)
             {
                 return NotFound();
+            }
+            if (NewIco != null)
+            {
+                string path = "/uploads/" + Guid.NewGuid() + NewIco.FileName;
+                using (var fileStream = new FileStream(_appEnvironment.WebRootPath + path, FileMode.Create))
+                {
+                    Path.Combine(Directory.GetCurrentDirectory(), "uploads", path);
+                    await NewIco.CopyToAsync(fileStream);
+                }
+                additionaly.Icon = path;
+
             }
 
             if (ModelState.IsValid)
