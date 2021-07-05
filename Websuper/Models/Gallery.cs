@@ -10,6 +10,8 @@ namespace Websuper.Models
         public string Title { get; set; }
         public string Description { get; set; }
         public string PhotoURL { get; set; }
+
+        public int CategoryID { get; set; }
         public virtual Category Category { get; set; }
     }
 }

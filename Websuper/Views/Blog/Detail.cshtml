@@ -1,0 +1,25 @@
+﻿@model HomeViewModel
+
+<div class="product">
+    <div class="product-blog">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6">
+                    <div class="left">
+                        <img class="img-fluid" style="margin-right:20px;" src="@Model.Blog.PhotoURL" alt="">
+                    </div>
+                </div>
+                <div class="col-lg-5">
+                    <div class="right">
+                        <h1>@Model.Blog.Title</h1>
+                        <p>
+                            @Model.Blog.Description
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+    </div>
+</div>

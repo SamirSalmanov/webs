@@ -7,7 +7,7 @@ header {
   display: -ms-flexbox;
   display: flex;
   height: 50px;
-  background-color: #571F9C;
+  background-color: #532A81;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -191,7 +191,7 @@ header .top-page .right-part i {
   font-size: 2px;
   border-radius: 3px;
   cursor: pointer;
-  background-color: #571F9C;
+  background-color: #532A81;
 }
 
 .nav-bar-all .nav-bar-logo {
@@ -216,8 +216,9 @@ header .top-page .right-part i {
 }
 
 .nav-bar-all .nav-menu ul .first-li {
-  color: #571F9C !important;
+  color: #532A81 !important;
 }
+
 
 .nav-bar-all .nav-menu ul .first-li:hover .home-nav {
   opacity: 100%;
@@ -278,7 +279,7 @@ header .top-page .right-part i {
 }
 
 .nav-bar-all .nav-menu ul li .home-nav .left-home:hover span {
-  color: #571F9C;
+  color: #532A81;
 }
 
 .nav-bar-all .nav-menu ul li .home-nav .left-home i {
@@ -306,7 +307,7 @@ header .top-page .right-part i {
 }
 
 .nav-bar-all .nav-menu ul li .home-nav .left-home ul li a:hover {
-  color: #571F9C;
+  color: #532A81;
 }
 
 .nav-bar-all .nav-menu ul li .home-nav .left-home span {
@@ -321,7 +322,7 @@ header .top-page .right-part i {
 }
 
 .nav-bar-all .nav-menu ul li .home-nav .right-home:hover span {
-  color: #571F9C;
+  color: #532A81;
 }
 
 .nav-bar-all .nav-menu ul li .home-nav .right-home i {
@@ -349,7 +350,7 @@ header .top-page .right-part i {
 }
 
 .nav-bar-all .nav-menu ul li .home-nav .right-home ul li a:hover {
-  color: #571F9C;
+  color: #532A81;
 }
 
 .nav-bar-all .nav-menu ul li .home-nav .right-home span {
@@ -420,7 +421,7 @@ header .top-page .right-part i {
 }
 
 .nav-bar-all .nav-menu ul li .works-nav ul li a:hover {
-  color: #571F9C;
+  color: #532A81;
 }
 
 .nav-bar-all .nav-menu ul li .short-nav {
@@ -514,7 +515,7 @@ header .top-page .right-part i {
 }
 
 .nav-bar-all .nav-menu ul li .short-nav ul li a:hover {
-  color: #571F9C;
+  color: #532A81;
 }
 
 .nav-bar-all .nav-menu ul li span {
@@ -525,7 +526,7 @@ header .top-page .right-part i {
 }
 
 .nav-bar-all .nav-menu ul li span:hover {
-  color: #571F9C;
+  color: #532A81;
 }
 
 .nav-bar-all .nav-menu ul li span i {
@@ -607,7 +608,7 @@ footer .all-footer h3 {
 footer .all-footer .line {
   width: 25px;
   height: 2px;
-  background-color: #571F9C;
+  background-color: #532A81;
   margin-bottom: 12px;
 }
 
@@ -725,25 +726,29 @@ footer .all-footer .right-foot ul li a:hover {
   }
 }
 
-@-webkit-keyframes anime-ico {
-  from {
-    -webkit-transform: translateY(-90px);
-            transform: translateY(-90px);
-  }
-  to {
-    -webkit-transform: translateY(0px);
-            transform: translateY(0px);
-  }
-}
 
-@keyframes anime-ico {
-  from {
-    -webkit-transform: translateY(-90px);
+
+    @-webkit-keyframes anime-ico {
+        from {
+            -webkit-transform: translateY(-90px);
             transform: translateY(-90px);
-  }
-  to {
-    -webkit-transform: translateY(0px);
+        }
+
+        to {
+            -webkit-transform: translateY(0px);
             transform: translateY(0px);
-  }
-}
-/*# sourceMappingURL=product.css.map */
+        }
+    }
+
+    @keyframes anime-ico {
+        from {
+            -webkit-transform: translateY(-90px);
+            transform: translateY(-90px);
+        }
+
+        to {
+            -webkit-transform: translateY(0px);
+            transform: translateY(0px);
+        }
+    }
+    /*# sourceMappingURL=product.css.map */

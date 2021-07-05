@@ -150,8 +150,8 @@
 
 
         <div class="col-lg-3 m-0 p-0">
-            <div class="one-item">
-                <img src="@gallery.PhotoURL" alt="">
+            <div class="one-item" style="height:250px;">
+                <img style="height:100%;" src="@gallery.PhotoURL" alt="">
                 <div class="blue-line1"></div>
                 <div class="blue-line2"></div>
                 <div class="blue-line3"></div>
@@ -186,12 +186,15 @@
                 <div class="one-blog">
                     <img src="@blog.PhotoURL" alt="">
                     <div class="comment">
-                        <h4>@blog.Title</h4>
-                        <h6>
-                            @blog.Description
-                        </h6>
+                        <h4 style="margin-top:15px;">@blog.Title</h4>
+                        <div style="height:94px; overflow-y:hidden" class="blog-sub">
+                            <h6 >
+                                @blog.Description
+                            </h6>
+                        </div>
+                      
                         <div class="forbut d-flex">
-                            <a href="">CONTINUE READING</a><i id="base" class="fas fa-caret-right"></i>
+                            <a href="/blog/detail/@blog.ID">CONTINUE READING</a><i id="base" class="fas fa-caret-right"></i>
                             <i id="up" class="fas fa-caret-right"></i>
 
                         </div>

@@ -7,7 +7,7 @@ namespace Websuper.Data.Migrations
         protected override void Up(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.RenameColumn(
-                name: "Text",
+                name: "Text",   
                 table: "ContactUs",
                 newName: "Title");
 

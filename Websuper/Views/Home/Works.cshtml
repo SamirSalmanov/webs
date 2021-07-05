@@ -9,11 +9,11 @@
                         </div>
                         <h3>Categories</h3>
                         <ul>
-                            <li><a href="#">Satış</a></li>
-                            <li><a href="#">Portfolio</a> </li>
-                            <li><a href="#">Dizayn</a> </li>
-                            <li><a href="#">Kurs</a> </li>
-                            <li><a href="#">Satış</a> </li>
+                            @foreach (var category in Model.Categories)
+                            {
+                                <li><a href="/home/works/@category.ID">@category.CategoryName</a></li>
+
+                            }
                         </ul>
 
                     </div>

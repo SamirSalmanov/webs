@@ -412,3 +412,15 @@ C:\Users\user\Desktop\websuper-back\Websuper\obj\Debug\net5.0\Razor\Views\Produc
 C:\Users\user\Desktop\websuper-back\Websuper\obj\Debug\net5.0\Razor\Views\Home\AboutUs.cshtml.g.cs
 C:\Users\user\Desktop\websuper-back\Websuper\obj\Debug\net5.0\Razor\Views\Home\Works.cshtml.g.cs
 C:\Users\user\Desktop\websuper-back\Websuper\obj\Debug\net5.0\Razor\Views\Home\WhyWe.cshtml.g.cs
+C:\Users\user\Desktop\websuper-back\Websuper\obj\Debug\net5.0\Razor\Areas\admin\Views\Categories\Create.cshtml.g.cs
+C:\Users\user\Desktop\websuper-back\Websuper\obj\Debug\net5.0\Razor\Areas\admin\Views\Categories\Delete.cshtml.g.cs
+C:\Users\user\Desktop\websuper-back\Websuper\obj\Debug\net5.0\Razor\Areas\admin\Views\Categories\Details.cshtml.g.cs
+C:\Users\user\Desktop\websuper-back\Websuper\obj\Debug\net5.0\Razor\Areas\admin\Views\Categories\Edit.cshtml.g.cs
+C:\Users\user\Desktop\websuper-back\Websuper\obj\Debug\net5.0\Razor\Areas\admin\Views\Categories\Index.cshtml.g.cs
+C:\Users\user\Desktop\websuper-back\Websuper\obj\Debug\net5.0\Razor\Areas\admin\Views\Portfolios\Create.cshtml.g.cs
+C:\Users\user\Desktop\websuper-back\Websuper\obj\Debug\net5.0\Razor\Areas\admin\Views\Portfolios\Delete.cshtml.g.cs
+C:\Users\user\Desktop\websuper-back\Websuper\obj\Debug\net5.0\Razor\Areas\admin\Views\Portfolios\Details.cshtml.g.cs
+C:\Users\user\Desktop\websuper-back\Websuper\obj\Debug\net5.0\Razor\Areas\admin\Views\Portfolios\Edit.cshtml.g.cs
+C:\Users\user\Desktop\websuper-back\Websuper\obj\Debug\net5.0\Razor\Areas\admin\Views\Portfolios\Index.cshtml.g.cs
+C:\Users\user\Desktop\websuper-back\Websuper\obj\Debug\net5.0\Razor\Views\Blog\Detail.cshtml.g.cs
+C:\Users\user\Desktop\websuper-back\Websuper\obj\Debug\net5.0\Razor\Views\Home\ContactUs.cshtml.g.cs

@@ -12,9 +12,11 @@ namespace Websuper.ViewModel
         public List<Services> Services { get; set; }
         public List<Gallery> Galleries { get; set; }
         public List<Blog> Blogs { get; set; }
+        public Blog Blog { get; set; }
         public ConsultNow ConsultNow { get; set; }
         public OneBlog OneBlog { get; set; }
         public Gallery Gallery { get; set; }
+        public List<Category> Categories { get; set; }
 
     }
 }

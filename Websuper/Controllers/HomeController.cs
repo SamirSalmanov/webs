@@ -47,17 +47,23 @@ namespace Websuper.Controllers
             };
             return View(vm);
         }
-        public IActionResult Works()
+        public IActionResult Works(int? id)
         {
             HomeViewModel vm = new HomeViewModel()
             {
-                Galleries = _context.Galleries.Where(x => x.IsActive == true).ToList()
+                Galleries = _context.Galleries.Where(x=>x.CategoryID == id).ToList(),
+                Categories = _context.Categories.Where(x => x.IsActive == true).ToList()
             };
             return View(vm);
         }
         public IActionResult WhyWe()
         {
           
+            return View();
+        }
+        public IActionResult ContactUs()
+        {
+
             return View();
         }
 
