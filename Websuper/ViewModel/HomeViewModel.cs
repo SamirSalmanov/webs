@@ -17,6 +17,8 @@ namespace Websuper.ViewModel
         public OneBlog OneBlog { get; set; }
         public Gallery Gallery { get; set; }
         public List<Category> Categories { get; set; }
+        public List<ContactUs> ContactUses { get; set; }
+
 
     }
 }

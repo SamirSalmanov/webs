@@ -49,9 +49,14 @@ namespace Websuper.Controllers
         }
         public IActionResult Works(int? id)
         {
+            var galleries = _context.Galleries.AsQueryable();
+            if (id.HasValue)
+            {
+                galleries = galleries.Where(x => x.CategoryID == id);
+            }
             HomeViewModel vm = new HomeViewModel()
             {
-                Galleries = _context.Galleries.Where(x=>x.CategoryID == id).ToList(),
+                Galleries = galleries.ToList(),
                 Categories = _context.Categories.Where(x => x.IsActive == true).ToList()
             };
             return View(vm);
@@ -63,8 +68,12 @@ namespace Websuper.Controllers
         }
         public IActionResult ContactUs()
         {
+            HomeViewModel vm = new HomeViewModel()
+            {
+                ContactUses = _context.ContactUs.Where(x => x.IsActive == true).ToList()
+            };
 
-            return View();
+            return View(vm);
         }
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]

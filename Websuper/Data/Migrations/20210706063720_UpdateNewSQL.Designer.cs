@@ -10,8 +10,8 @@ using Websuper.Data;
 namespace Websuper.Data.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20210629130129_NewEntities")]
-    partial class NewEntities
+    [Migration("20210706063720_UpdateNewSQL")]
+    partial class UpdateNewSQL
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -248,6 +248,36 @@ namespace Websuper.Data.Migrations
                     b.ToTable("AboutUs");
                 });
 
+            modelBuilder.Entity("Websuper.Models.Additionaly", b =>
+                {
+                    b.Property<int>("ID")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int")
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<string>("Description")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Icon")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<bool>("IsActive")
+                        .HasColumnType("bit");
+
+                    b.Property<bool>("IsDeleted")
+                        .HasColumnType("bit");
+
+                    b.Property<DateTime?>("ModifiedOn")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("Title")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("ID");
+
+                    b.ToTable("Additionaly");
+                });
+
             modelBuilder.Entity("Websuper.Models.Blog", b =>
                 {
                     b.Property<int>("ID")
@@ -351,6 +381,9 @@ namespace Websuper.Data.Migrations
                     b.Property<DateTime?>("ModifiedOn")
                         .HasColumnType("datetime2");
 
+                    b.Property<string>("Name")
+                        .HasColumnType("nvarchar(max)");
+
                     b.Property<string>("Text")
                         .HasColumnType("nvarchar(max)");
 
@@ -393,7 +426,7 @@ namespace Websuper.Data.Migrations
                         .HasColumnType("int")
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
-                    b.Property<int?>("CategoryID")
+                    b.Property<int>("CategoryID")
                         .HasColumnType("int");
 
                     b.Property<string>("Description")
@@ -407,6 +440,9 @@ namespace Websuper.Data.Migrations
 
                     b.Property<DateTime?>("ModifiedOn")
                         .HasColumnType("datetime2");
+
+                    b.Property<string>("PhotoURL")
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Title")
                         .HasColumnType("nvarchar(max)");
@@ -436,6 +472,9 @@ namespace Websuper.Data.Migrations
 
                     b.Property<DateTime?>("ModifiedOn")
                         .HasColumnType("datetime2");
+
+                    b.Property<string>("PhotoURL")
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("SubTitle")
                         .HasColumnType("nvarchar(max)");
@@ -498,6 +537,9 @@ namespace Websuper.Data.Migrations
                         .HasColumnType("datetime2");
 
                     b.Property<string>("Phone")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("PhotoURL")
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("SubTitle")
@@ -642,7 +684,9 @@ namespace Websuper.Data.Migrations
                 {
                     b.HasOne("Websuper.Models.Category", "Category")
                         .WithMany()
-                        .HasForeignKey("CategoryID");
+                        .HasForeignKey("CategoryID")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
 
                     b.Navigation("Category");
                 });

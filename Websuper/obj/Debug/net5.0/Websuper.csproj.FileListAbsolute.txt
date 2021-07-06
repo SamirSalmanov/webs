@@ -424,3 +424,13 @@ C:\Users\user\Desktop\websuper-back\Websuper\obj\Debug\net5.0\Razor\Areas\admin\
 C:\Users\user\Desktop\websuper-back\Websuper\obj\Debug\net5.0\Razor\Areas\admin\Views\Portfolios\Index.cshtml.g.cs
 C:\Users\user\Desktop\websuper-back\Websuper\obj\Debug\net5.0\Razor\Views\Blog\Detail.cshtml.g.cs
 C:\Users\user\Desktop\websuper-back\Websuper\obj\Debug\net5.0\Razor\Views\Home\ContactUs.cshtml.g.cs
+C:\Users\user\Desktop\websuper-back\Websuper\obj\Debug\net5.0\Razor\Areas\Identity\Pages\Account\ConfirmEmail.cshtml.g.cs
+C:\Users\user\Desktop\websuper-back\Websuper\obj\Debug\net5.0\Razor\Areas\Identity\Pages\Account\Login.cshtml.g.cs
+C:\Users\user\Desktop\websuper-back\Websuper\obj\Debug\net5.0\Razor\Areas\Identity\Pages\Account\Manage\Email.cshtml.g.cs
+C:\Users\user\Desktop\websuper-back\Websuper\obj\Debug\net5.0\Razor\Areas\Identity\Pages\Account\Manage\_ManageNav.cshtml.g.cs
+C:\Users\user\Desktop\websuper-back\Websuper\obj\Debug\net5.0\Razor\Areas\Identity\Pages\Account\Manage\_ViewImports.cshtml.g.cs
+C:\Users\user\Desktop\websuper-back\Websuper\obj\Debug\net5.0\Razor\Areas\Identity\Pages\Account\Register.cshtml.g.cs
+C:\Users\user\Desktop\websuper-back\Websuper\obj\Debug\net5.0\Razor\Areas\Identity\Pages\Account\_ViewImports.cshtml.g.cs
+C:\Users\user\Desktop\websuper-back\Websuper\obj\Debug\net5.0\Razor\Areas\Identity\Pages\_ValidationScriptsPartial.cshtml.g.cs
+C:\Users\user\Desktop\websuper-back\Websuper\obj\Debug\net5.0\Razor\Areas\Identity\Pages\_ViewImports.cshtml.g.cs
+C:\Users\user\Desktop\websuper-back\Websuper\obj\Debug\net5.0\Razor\Areas\Identity\Pages\_ViewStart.cshtml.g.cs
