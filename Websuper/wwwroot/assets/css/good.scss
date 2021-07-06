@@ -1056,163 +1056,157 @@ header {
 }
 
 .gallery {
-  padding-top: 40px;
+    padding-top: 40px;
 
-  .gallery-head {
-    text-align: center;
-    padding-top: 10px;
+    .gallery-head {
+        text-align: center;
+        padding-top: 10px;
 
-    h4 {
-      color: rgb(179, 179, 179);
+        h4 {
+            color: rgb(179, 179, 179);
+        }
+
+        h1 {
+            font-size: 56px;
+            padding-bottom: 50px;
+        }
     }
 
-    h1 {
-      font-size: 56px;
-      padding-bottom: 50px;
+    .all-gallery {
+        .one-item {
+            position: relative;
+            overflow: hidden;
+
+            &:hover {
+                #ihov1 {
+                    animation: anime-ico .6s ease-in-out forwards;
+                }
+
+                #ihov2 {
+                    animation: anime-ico .6s ease-in-out forwards;
+                    animation-delay: .2s;
+                }
+
+                .blue-line1 {
+                    top: -40px;
+                    right: 80px;
+                }
+
+                .blue-line2 {
+                    top: -40px;
+                    right: 40px;
+                }
+
+                .blue-line3 {
+                    top: -120px;
+                    right: 80px;
+                }
+
+                .blue-line4 {
+                    top: -120px;
+                    right: 110px;
+                }
+
+                .comment {
+                    top: 100px;
+                }
+            }
+
+            img {
+                width: 100%;
+                object-fit: cover;
+            }
+
+            .comment {
+                position: absolute;
+                top: 290px;
+                left: 20px;
+                color: white;
+                border-left: 3px solid white;
+                transition: .5s ease-in-out;
+
+                h2 {
+                    padding-left: 9px;
+                }
+
+                p {
+                    padding-left: 9px;
+                }
+            }
+
+            .for-ico {
+                position: absolute;
+                top: 15px;
+                left: 23px;
+                font-size: 20px;
+
+             
+
+                i {
+                    // color: white;
+                    border: 1px solid white;
+                    border-radius: 50%;
+                    padding: 11px;
+                    color: white;
+                    transition: .5s ease-in-out;
+                    transform: translateY(-90px);
+
+                    &:hover {
+                        background: white;
+                        color: #571F9C;
+                    }
+                }   
+            }
+
+            .blue-line1 {
+                position: absolute;
+                width: 600px;
+                height: 600px;
+                background: #571F9C;
+                top: -40px;
+                right: 610px;
+                opacity: .4;
+                transform: rotate(70deg);
+                transition: .5s ease-in-out;
+            }
+
+            .blue-line2 {
+                position: absolute;
+                width: 600px;
+                height: 600px;
+                background: #571F9C;
+                top: -40px;
+                right: 570px;
+                opacity: .4;
+                transform: rotate(70deg);
+                transition: .5s ease-in-out;
+            }
+
+            .blue-line3 {
+                position: absolute;
+                width: 600px;
+                height: 600px;
+                background: #571F9C;
+                top: -120px;
+                right: 570px;
+                opacity: .4;
+                transform: rotate(-70deg);
+                transition: .5s ease-in-out;
+            }
+
+            .blue-line4 {
+                position: absolute;
+                width: 600px;
+                height: 600px;
+                background: #571F9C;
+                top: -120px;
+                right: 510px;
+                opacity: .4;
+                transform: rotate(-70deg);
+                transition: .5s ease-in-out;
+            }
+        }
     }
-  }
-
-  .all-gallery {
-    .one-item {
-      position: relative;
-      overflow: hidden;
-
-      &:hover {
-        #ihov1 {
-          animation: anime-ico .6s ease-in-out forwards;
-        }
-
-        #ihov2 {
-          animation: anime-ico .6s ease-in-out forwards;
-          animation-delay: .2s;
-        }
-
-        .blue-line1 {
-          top: -40px;
-          right: 80px;
-        }
-
-        .blue-line2 {
-          top: -40px;
-          right: 40px;
-        }
-
-        .blue-line3 {
-          top: -120px;
-          right: 80px;
-        }
-
-        .blue-line4 {
-          top: -120px;
-          right: 110px;
-        }
-
-        .comment {
-          top: 100px;
-        }
-      }
-
-      img {
-        width: 100%;
-        object-fit: cover;
-      }
-
-      .comment {
-        position: absolute;
-        top: 290px;
-        left: 20px;
-        color: white;
-        border-left: 3px solid white;
-        transition: .5s ease-in-out;
-
-        h2 {
-          padding-left: 9px;
-        }
-
-        p {
-          padding-left: 9px;
-        }
-      }
-
-      .for-ico {
-        position: absolute;
-        top: 15px;
-        left: 23px;
-        font-size: 20px;
-
-        i {
-          // color: white;
-          border: 1px solid white;
-          border-radius: 50%;
-          padding: 11px;
-          color: white;
-          transition: .5s ease-in-out;
-          transform: translateY(-90px);
-
-          &:hover {
-            background: white;
-            color: #571F9C;
-          }
-
-        }
-
-
-      }
-
-      .blue-line1 {
-        position: absolute;
-        width: 600px;
-        height: 600px;
-        background: #571F9C;
-        top: -40px;
-        right: 610px;
-        opacity: .4;
-        transform: rotate(70deg);
-        transition: .5s ease-in-out;
-
-
-      }
-
-      .blue-line2 {
-        position: absolute;
-        width: 600px;
-        height: 600px;
-        background: #571F9C;
-        top: -40px;
-        right: 570px;
-        opacity: .4;
-        transform: rotate(70deg);
-        transition: .5s ease-in-out;
-
-      }
-
-      .blue-line3 {
-        position: absolute;
-        width: 600px;
-        height: 600px;
-        background: #571F9C;
-        top: -120px;
-        right: 570px;
-        opacity: .4;
-        transform: rotate(-70deg);
-        transition: .5s ease-in-out;
-
-      }
-
-      .blue-line4 {
-        position: absolute;
-        width: 600px;
-        height: 600px;
-        background: #571F9C;
-        top: -120px;
-        right: 510px;
-        opacity: .4;
-        transform: rotate(-70deg);
-        transition: .5s ease-in-out;
-
-      }
-    }
-  }
 }
 
 .blog {

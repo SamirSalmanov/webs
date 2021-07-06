@@ -1140,16 +1140,20 @@ header .top-page .right-part i {
   left: 23px;
   font-size: 20px;
 }
+    .gallery .all-gallery .one-item .for-ico a {
+        text-decoration: none;
+    }
+
 
 .gallery .all-gallery .one-item .for-ico i {
-  border: 1px solid white;
-  border-radius: 50%;
-  padding: 11px;
-  color: white;
-  -webkit-transition: .5s ease-in-out;
-  transition: .5s ease-in-out;
-  -webkit-transform: translateY(-90px);
-          transform: translateY(-90px);
+    border: 1px solid white;
+    border-radius: 50%;
+    padding: 11px;
+    color: white;
+    -webkit-transition: .5s ease-in-out;
+    transition: .5s ease-in-out;
+    -webkit-transform: translateY(-90px);
+    transform: translateY(-90px);
 }
 
 .gallery .all-gallery .one-item .for-ico i:hover {
